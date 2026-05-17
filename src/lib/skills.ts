@@ -1,0 +1,67 @@
+export const skills: SkillRecord[] = [
+  {
+    id: "skill-001",
+    title: "Autonomous Workflow Orchestrator",
+    slug: "autonomous-workflow-orchestrator",
+    description:
+      "A skill that coordinates multi-step task execution across agent workflows with retry logic and state persistence.",
+    category: "Orchestration",
+    tags: ["automation", "orchestration", "agents"],
+    installCommand: "npm install @skild/autonomous-workflow-orchestrator",
+    createdAt: "2026-05-01T12:00:00Z",
+    authorClerkId: "clerk_abc123",
+    authorEmeil: "dev@agentstudio.ai",
+  },
+  {
+    id: "skill-002",
+    title: "Contextual Memory Cache",
+    slug: "contextual-memory-cache",
+    description:
+      "Provides persistent contextual memory storage for agents to recall prior interactions and adapt behavior over time.",
+    category: "Memory",
+    tags: ["memory", "context", "persistence"],
+    installCommand: "npm install @skild/contextual-memory-cache",
+    createdAt: "2026-05-05T08:30:00Z",
+    authorClerkId: "clerk_def456",
+    authorEmeil: "memory@agentium.dev",
+  },
+  {
+    id: "skill-003",
+    title: "Prompt Optimization Toolkit",
+    slug: "prompt-optimization-toolkit",
+    description:
+      "A toolkit for generating, evaluating, and refining prompts for high-quality agent responses.",
+    category: "Prompting",
+    tags: ["prompt engineering", "ai", "toolkit"],
+    installCommand: "npm install @skild/prompt-optimization-toolkit",
+    createdAt: "2026-05-08T14:45:00Z",
+    authorClerkId: "clerk_ghi789",
+    authorEmeil: "prompt@aiworks.io",
+  },
+  {
+    id: "skill-004",
+    title: "Secure Agent Auth",
+    slug: "secure-agent-auth",
+    description:
+      "Adds role-based authentication and secure credential handling for agent-driven applications.",
+    category: "Security",
+    tags: ["security", "auth", "credentials"],
+    installCommand: "npm install @skild/secure-agent-auth",
+    createdAt: null,
+    authorClerkId: null,
+    authorEmeil: null,
+  },
+  {
+    id: "skill-005",
+    title: "Analytics Insight Plugin",
+    slug: "analytics-insight-plugin",
+    description:
+      "Collects usage metrics and usage signals from agent interactions to surface actionable insights.",
+    category: "Analytics",
+    tags: ["analytics", "insights", "metrics"],
+    installCommand: "npm install @skild/analytics-insight-plugin",
+    createdAt: "2026-05-12T19:20:00Z",
+    authorClerkId: "clerk_jkl012",
+    authorEmeil: "metrics@skillhub.com",
+  },
+];
