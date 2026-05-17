@@ -1,4 +1,4 @@
-interface SkillRecord {
+export interface SkillRecord {
   id: string;
   title: string;
   slug: string;
@@ -8,5 +8,7 @@ interface SkillRecord {
   installCommand: string;
   createdAt: string | null;
   authorClerkId: string | null;
-  authorEmeil: string | null;
+  authorEmail: string | null;
+  upvotes: number;
+  commentCount: number;
 }

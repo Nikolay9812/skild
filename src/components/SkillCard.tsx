@@ -1,3 +1,4 @@
+import type { SkillRecord } from "../../type.d";
 import { Link } from "@tanstack/react-router";
 import {
   ArrowBigUp,
@@ -9,16 +10,23 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
+type SkillCardProps = Omit<SkillRecord, "id" | "slug" | "authorClerkId">;
+
 const SkillCard = ({
   authorEmail,
   title,
   description,
   createdAt,
   installCommand,
-  tags,
   category,
-}) => {
+  upvotes,
+  commentCount,
+}: SkillCardProps) => {
   const [copied, setCopied] = useState(false);
+  const authorLabel = authorEmail ?? "Unknown author";
+  const createdAtLabel = createdAt
+    ? new Date(createdAt).toLocaleDateString()
+    : "Unknown date";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(installCommand);
@@ -50,8 +58,8 @@ const SkillCard = ({
           <div className="author">
             <img src="/logo512.png" alt="author avatar" className="avatar" />
             <div className="author-copy">
-              <p>Nikolay</p>
-              <p>{new Date(createdAt as string).toLocaleDateString()}</p>
+              <p>{authorLabel}</p>
+              <p>{createdAtLabel}</p>
             </div>
           </div>
 
@@ -85,12 +93,12 @@ const SkillCard = ({
           <div className="stats">
             <button type="button" className="upvote" disabled>
               <ArrowBigUp size={16} fill="currentColor" />
-              <span>{tags.length}</span>
+              <span>{upvotes}</span>
             </button>
 
             <div className="comments">
               <MessageSquare size={14} />
-              <span>{authorEmail ? 1 : 0}</span>
+              <span>{commentCount}</span>
             </div>
           </div>
 
@@ -103,7 +111,7 @@ const SkillCard = ({
             <button
               type="button"
               className="save"
-              aria-label="SSaved state"
+              aria-label="Saved state"
               disabled
             >
               <Bookmark size={16} />

@@ -47,7 +47,18 @@ function App() {
           {skills.length > 0 ? (
             <div className="skills-grid">
               {skills.map((skill) => (
-                <SkillCard key={skill.id} {...skill} />
+                <SkillCard
+                  key={skill.id}
+                  authorEmail={skill.authorEmail}
+                  title={skill.title}
+                  description={skill.description}
+                  category={skill.category}
+                  tags={skill.tags}
+                  installCommand={skill.installCommand}
+                  createdAt={skill.createdAt}
+                  upvotes={skill.upvotes}
+                  commentCount={skill.commentCount}
+                />
               ))}
             </div>
           ) : (

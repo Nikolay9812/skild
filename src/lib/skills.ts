@@ -1,3 +1,5 @@
+import type { SkillRecord } from "../../type.d";
+
 export const skills: SkillRecord[] = [
   {
     id: "skill-001",
@@ -10,7 +12,9 @@ export const skills: SkillRecord[] = [
     installCommand: "npm install @skild/autonomous-workflow-orchestrator",
     createdAt: "2026-05-01T12:00:00Z",
     authorClerkId: "clerk_abc123",
-    authorEmeil: "dev@agentstudio.ai",
+    authorEmail: "dev@agentstudio.ai",
+    upvotes: 128,
+    commentCount: 4,
   },
   {
     id: "skill-002",
@@ -23,7 +27,9 @@ export const skills: SkillRecord[] = [
     installCommand: "npm install @skild/contextual-memory-cache",
     createdAt: "2026-05-05T08:30:00Z",
     authorClerkId: "clerk_def456",
-    authorEmeil: "memory@agentium.dev",
+    authorEmail: "memory@agentium.dev",
+    upvotes: 96,
+    commentCount: 7,
   },
   {
     id: "skill-003",
@@ -36,7 +42,9 @@ export const skills: SkillRecord[] = [
     installCommand: "npm install @skild/prompt-optimization-toolkit",
     createdAt: "2026-05-08T14:45:00Z",
     authorClerkId: "clerk_ghi789",
-    authorEmeil: "prompt@aiworks.io",
+    authorEmail: "prompt@aiworks.io",
+    upvotes: 72,
+    commentCount: 5,
   },
   {
     id: "skill-004",
@@ -49,7 +57,9 @@ export const skills: SkillRecord[] = [
     installCommand: "npm install @skild/secure-agent-auth",
     createdAt: null,
     authorClerkId: null,
-    authorEmeil: null,
+    authorEmail: null,
+    upvotes: 21,
+    commentCount: 0,
   },
   {
     id: "skill-005",
@@ -62,6 +72,8 @@ export const skills: SkillRecord[] = [
     installCommand: "npm install @skild/analytics-insight-plugin",
     createdAt: "2026-05-12T19:20:00Z",
     authorClerkId: "clerk_jkl012",
-    authorEmeil: "metrics@skillhub.com",
+    authorEmail: "metrics@skillhub.com",
+    upvotes: 54,
+    commentCount: 2,
   },
 ];
