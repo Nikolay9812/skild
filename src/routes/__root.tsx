@@ -7,6 +7,7 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 
 import { ClerkProvider } from '@clerk/tanstack-react-start'
+import { PostHogProvider } from '@posthog/react'
 
 import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
 
@@ -56,6 +57,16 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="font-sans antialiased wrap-anywhere">
+        <PostHogProvider
+          apiKey={import.meta.env.VITE_PUBLIC_POSTHOG_PROJECT_TOKEN!}
+          options={{
+            api_host: '/ingest',
+            ui_host: import.meta.env.VITE_PUBLIC_POSTHOG_HOST || 'https://eu.posthog.com',
+            defaults: '2025-05-24',
+            capture_exceptions: true,
+            debug: import.meta.env.DEV,
+          }}
+        >
         <ClerkProvider>
           <div id="root-layout">
             <header>
@@ -82,6 +93,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             ]}
           />
         </ClerkProvider>
+        </PostHogProvider>
         <Scripts />
       </body>
     </html>
