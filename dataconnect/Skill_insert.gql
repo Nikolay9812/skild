@@ -1,0 +1,15 @@
+# This is a file for you to write an un-named mutation. 
+# Only one un-named mutation is allowed per file.
+mutation {
+  skill_insert(
+    data: {id: "11111111222233334444555555555555", 
+    authorClerkId: "user_3DwwNDgF4gpGBlDuo0LPuxCwPqn",
+     createdAt: "2026-05-24T04:24:59.653Z",
+      description: "Provides persistent contextual memory storage for agents to recall prior interactions and adapt behavior over time.",
+       installCommand: "npm install @skild/contextual-memory-cache", 
+      promptConfig: "You are professional software engineer.",
+       tags: ["ai-agent", "engineering", "memory", "persistence"],
+        title: "Performance Tuner",
+         usageExample: "Review with the code and optimize it"}
+  )
+}

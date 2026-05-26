@@ -1,0 +1,8 @@
+query {
+  users {
+    clerkId
+    email
+    username
+    imageUrl
+  }
+}
