@@ -2,7 +2,7 @@
 # Only one un-named mutation is allowed per file.
 mutation {
   skill_insert(
-    data: {id: "11111111222233334444555555555555", 
+    data: {id: "11111111222233334444555555555559", 
     authorClerkId: "user_3DwwNDgF4gpGBlDuo0LPuxCwPqn",
      createdAt: "2026-05-24T04:24:59.653Z",
       description: "Provides persistent contextual memory storage for agents to recall prior interactions and adapt behavior over time.",
